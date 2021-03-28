@@ -1,0 +1,39 @@
+Algoritmo "conversor de bases"
+// Descrição   : converter números decimal para binário e vice-versa
+// Autor(a)    : Thiago Tietjen
+// Data atual  : 28/03/2021
+Var
+
+   opcao:caracter
+   decimal: inteiro
+   binario: inteiro
+   temp: inteiro
+   resultado: caracter
+
+Inicio
+      escreval ("Qual a conversão deseja realizar:")
+      escreval("1 - decimal para binario")
+      escreval("2 - binario para decimal")
+      leia(opcao)
+      
+      escolha opcao
+      caso "1"
+           escreval("digite um número decimal: ")
+           leia(decimal)
+           temp <- decimal
+           resultado <- ""
+           enquanto decimal > 0 faca
+           se (decimal mod 2) = 0 entao
+           resultado <- "0" + resultado
+           senao
+           resultado <- "1" + resultado
+           fimse
+           decimal <- decimal div 2
+           fimenquanto
+           escreval(temp, " = ", resultado)
+           
+           
+      caso "2"
+           escreval("digite um número binario: ")
+           leia(binario)
+           temp <- binario
